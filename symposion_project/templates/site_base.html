@@ -15,6 +15,9 @@
 
 {% block extra_head_base %}
     <link href="{{ STATIC_URL }}img/favicon.ico" rel="shortcut icon" />
+     <link rel='stylesheet' id='oswald-css'
+     href='http://fonts.googleapis.com/css?family=Oswald&#038;ver=3.3.2'
+     type='text/css' media='all' />
     <script src="{% block jquery_src %}{% static "pinax/js/jquery.js" %}{% endblock %}"></script>
     {% markitup_media "no-jquery" %}
     {% block extra_head %}{% endblock %}
@@ -53,7 +56,8 @@
             </div>
             
             <h1><a href="{% url home %}">{{ SITE_NAME }}</a></h1>
-            <h2><a href="{% url home %}"><span style="font-weight: 200;">Some amazing location, February 31st</span></a></h2>
+            <h2><a href="{% url home %}">
+	      Paris, <span class="conf-date">February 31st</span></span></a></h2>
         </header>
         <div class="navbar">
             <div class="navbar-inner">
